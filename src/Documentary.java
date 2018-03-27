@@ -15,7 +15,14 @@ public class Documentary extends Movie {
 	
 	/** constructors go here, with the default constructor leading other constructor(s) */
 	public Documentary() {}
-	public Documentary(int numberOfDistributors, double premiumPaid) {}
+	public Documentary(int numberOfDistributors, double premiumPaid) {
+		super.getTitle();
+		super.getDirector();
+		super.getYear();
+		super.getProductionCost();
+		this.numberOfDistributors = numberOfDistributors;
+		this.premiumPaid = premiumPaid;
+	}
 	
 	/** getters for private data members go here. Other name: readers/accessors */
 	public int getNumberOfDistributors() {

@@ -24,8 +24,8 @@ public class TimOBrienHw8 {
 	}
 	
 	public static void printMovieInfo(Movie[] category) {
-		for(int i = 0; i<category.length; i++) {
-			System.out.printf("%1s", category[i]);
+		for(Movie d : category) {
+			System.out.printf("%s", d.toString());
 		}
 	}
 

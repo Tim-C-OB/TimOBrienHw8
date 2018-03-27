@@ -16,7 +16,12 @@ public class Movie {
 
 	/** constructors go here, with the default constructor leading other constructor(s) */
 	public Movie() {}
-	public Movie(String title, String director, int year, double productionCost) {}
+	public Movie(String title, String director, int year, double productionCost) {
+		this.title = title;
+		this.director = director;
+		this.year = year;
+		this.productionCost = productionCost;
+	}
 	
 	/** getters for private data members go here. Other name: readers/accessors */
 	public String getTitle() {

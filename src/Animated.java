@@ -14,7 +14,14 @@ public class Animated extends Movie {
 
 	/** constructors go here, with the default constructor leading other constructor(s) */
 	public Animated() {}
-	public Animated(double royaltyRates, double incomeOfProducts) {}
+	public Animated(double royaltyRates, double incomeOfProducts) {
+		super.getTitle();
+		super.getDirector();
+		super.getYear();
+		super.getProductionCost();
+		this.royaltyRates = royaltyRates;
+		this.incomeOfProducts = incomeOfProducts;
+	}
 	
 	/** getters for private data members go here. Other name: readers/accessors */
 	public double getRoyaltyRates() {
