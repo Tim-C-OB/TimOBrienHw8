@@ -16,10 +16,7 @@ public class Animated extends Movie {
 	public Animated() {}
 	public Animated(double royaltyRates, double incomeOfProducts, String title, String director, 
 					int year, double productionCost) {
-		super.getTitle();
-		super.getDirector();
-		super.getYear();
-		super.getProductionCost();
+		super(title, director, year, productionCost);
 		this.royaltyRates = royaltyRates;
 		this.incomeOfProducts = incomeOfProducts;
 	}

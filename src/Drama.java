@@ -15,10 +15,7 @@ public class Drama extends Movie {
 	/** constructors go here, with the default constructor leading other constructor(s) */
 	public Drama() {}
 	public Drama(double ticketsSold, double avgTicketPrice, String title, String director, int year, double productionCost) {
-		super.getTitle();
-		super.getDirector();
-		super.getYear();
-		super.getProductionCost();
+		super(title, director, year, productionCost);
 		this.avgTicketPrice = avgTicketPrice;
 		this.ticketsSold = ticketsSold;
 	}

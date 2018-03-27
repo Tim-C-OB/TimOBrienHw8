@@ -16,10 +16,7 @@ public class Documentary extends Movie {
 	/** constructors go here, with the default constructor leading other constructor(s) */
 	public Documentary() {}
 	public Documentary(int numberOfDistributors, double premiumPaid, String title, String director, int year, double productionCost) {
-		super.getTitle();
-		super.getDirector();
-		super.getYear();
-		super.getProductionCost();
+		super(title, director, year, productionCost);
 		this.numberOfDistributors = numberOfDistributors;
 		this.premiumPaid = premiumPaid;
 	}
