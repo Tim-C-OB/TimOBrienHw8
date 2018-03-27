@@ -14,7 +14,8 @@ public class Animated extends Movie {
 
 	/** constructors go here, with the default constructor leading other constructor(s) */
 	public Animated() {}
-	public Animated(double royaltyRates, double incomeOfProducts) {
+	public Animated(double royaltyRates, double incomeOfProducts, String title, String director, 
+					int year, double productionCost) {
 		super.getTitle();
 		super.getDirector();
 		super.getYear();
