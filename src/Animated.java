@@ -14,8 +14,7 @@ public class Animated extends Movie {
 
 	/** constructors go here, with the default constructor leading other constructor(s) */
 	public Animated() {}
-	public Animated(double royaltyRates, double incomeOfProducts, String title, String director, 
-					int year, double productionCost) {
+	public Animated(double royaltyRates, double incomeOfProducts, String title, String director, int year, double productionCost) {
 		super(title, director, year, productionCost);
 		this.royaltyRates = royaltyRates;
 		this.incomeOfProducts = incomeOfProducts;
@@ -59,7 +58,15 @@ public class Animated extends Movie {
 	
 	public String toString() {
 		String fromParent = super.toString(); 
-		String myOwnMessage = String.format ("This is an %8s movie, it generated %8s in profit.", getCategory(), calcProfit()); 
+		 
+		String myOwnMessage;
+		
+		if(calcProfit() > 0) {
+			myOwnMessage = String.format ("This is an %8s movie, it generated %.3f in profit.", getCategory(), calcProfit());
+		}else {
+			myOwnMessage = String.format ("This is an %8s movie, it lost $%.3f.", getCategory(), calcProfit());
+		}
+		
 		return fromParent + myOwnMessage; 
 	}
 	

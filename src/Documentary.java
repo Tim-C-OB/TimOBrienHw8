@@ -60,7 +60,12 @@ public class Documentary extends Movie {
 	
 	public String toString() {
 		String fromParent = super.toString(); 
-		String myOwnMessage = String.format ("This is an %8s movie, it generated %8s in profit.", getCategory(), calcProfit()); 
+		String myOwnMessage;
+		if(calcProfit() > 0) {
+			myOwnMessage = String.format ("This is a %1s movie, it generated %.3f in profit.", getCategory(), calcProfit());
+		}else {
+			myOwnMessage = String.format ("This is a %1s movie, it lost $%.3f.", getCategory(), calcProfit());
+		}
 		return fromParent + myOwnMessage; 
 	}
 	

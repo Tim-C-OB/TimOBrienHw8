@@ -7,7 +7,7 @@
  * Superclass of Documentary, Drama, and Animated. 
  */
 
-public class Movie {
+public abstract class Movie implements Profitable{
 	
 	/** a list of private data members goes here */
 	private String title, director;
@@ -59,7 +59,7 @@ public class Movie {
 	
 	/** effectors (methods that are not constructor/getter/setter) go here */
 	public String toString() {
-		String info = String.format("%8s, was directed by %8s in %8s for a total cost of %8s. \n", title, director, year, productionCost);
+		String info = String.format("%8s, was directed by %3s in %3s for a total cost of %.3f. \n", title, director, year, productionCost);
 		return info;
 	}
 	
